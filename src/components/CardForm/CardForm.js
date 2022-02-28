@@ -1,7 +1,7 @@
+import Button from '../Button/Button.js';
+import TextInput from '../TextInput/TextInput.js';
 import styles from './CardForm.module.scss';
 import { useState } from 'react';
-import Button from '../Button/Button';
-import TextInput from '../TextInput/TextInput';
 
 const CardForm = props => {
     const [title, setTitle] = useState('');
@@ -9,14 +9,14 @@ const CardForm = props => {
         e.preventDefault();
         props.action({ title: title}, props.columnId);
         setTitle('');
-    }
+    };
 
-    return (
-        <form className={styles.cardForm} onSubmit={handleSubmit}>
-            <TextInput type="text" value={title} onChange={e => setTitle(e.target.value)} />
-            <Button>ADD CARD</Button>
-    </form>
-    )
+	return (
+        <form onSubmit={handleSubmit} className={styles.cardForm}>
+            <TextInput value={title} onChange={e => setTitle(e.target.value)} />
+            <Button>Add card</Button>
+        </form>
+	);
 };
 
 export default CardForm;
