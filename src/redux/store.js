@@ -4,6 +4,8 @@ import initialState from "./initialState";
 
 const reducer = (state, action) => {
     switch(action.type) {
+        case 'UPDATE_SEARCHSTRING':
+            return {...state, searchString: action.payload};
         case 'ADD_COLUMN':
             return {...state, columns: [...state.columns, {...action.payload, id: shortid() }]};
         case 'ADD_CARD':
