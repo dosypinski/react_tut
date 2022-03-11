@@ -1,6 +1,6 @@
 const initialState = {
 
-  searchString: '',
+  searchString: {searchString: ''},
 
     columns: [
       {
