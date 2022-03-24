@@ -8,9 +8,11 @@ import { addCard } from '../../redux/store';
 const CardForm = props => {
     const dispatch = useDispatch();
     const [title, setTitle] = useState('');
+    const columnId = props.columnId
+    
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch(addCard({ title, columnId: props.columnId}));
+        dispatch(addCard({ title, columnId}));
         setTitle('');
     };
 

@@ -9,9 +9,9 @@ const NavBar = () => {
       <div className={styles.container}>
         <a href="/"><FontAwesomeIcon className={styles.icon} icon={faBars} /></a>
         <ul className={styles.list}>
-          <li className={styles.listElem}><NavLink className={styles.navLink} to="/">HOME</NavLink></li>
-          <li className={styles.listElem}><NavLink className={styles.navLink} to="/favorite">FAVORITE</NavLink></li>
-          <li className={styles.listElem}><NavLink className={styles.navLink} to="/about">ABOUT</NavLink></li>
+          <li><NavLink className={({ isActive }) => isActive ? styles.linkActive : undefined} to="/">HOME</NavLink></li>
+          <li><NavLink className={({ isActive }) => isActive ? styles.linkActive : undefined} to="/favorite">FAVORITE</NavLink></li>
+          <li><NavLink className={({ isActive }) => isActive ? styles.linkActive : undefined} to="/about">ABOUT</NavLink></li>
         </ul>
       </div>
     </nav>
