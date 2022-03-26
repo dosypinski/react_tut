@@ -11,3 +11,15 @@
     justify-content: space-between;
     font-weight: bold;
 }
+
+.icon {
+    color: black;
+    border: none;
+    background: none;
+}
+
+.isFavorite {
+    color: $color-warning;
+    border: none;
+    background: none;
+}
