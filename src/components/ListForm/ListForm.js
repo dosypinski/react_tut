@@ -3,7 +3,7 @@ import TextInput from 'components/TextInput/TextInput';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import styles from './ListForm.module.scss'
-import { addList } from 'src/redux/store';
+import { addList } from 'src/redux/listsRedux';
 
 const ListForm = props => {
     const dispatch = useDispatch();

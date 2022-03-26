@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Card.module.scss';
 import clsx from 'clsx';
 import { useDispatch } from 'react-redux';
-import { favoriteToggle } from 'src/redux/store';
+import { favoriteToggle } from 'src/redux/cardsRedux';
 import { useSelector } from 'react-redux';
 
 const Card = props => {
